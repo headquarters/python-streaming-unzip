@@ -39,7 +39,7 @@ This limits our container to 300MB of memory and memory swap and roughly 300MB o
 
 ## Scenarios
 
-## Unzip to memory
+### Unzip to memory
 
 1. Edit the `src/main.py` file and uncomment `load_file_into_memory()` at the bottom
 1. Inside the running container `cd ../mount`
@@ -54,7 +54,7 @@ Killed
 
 The process was killed due to exhausting memory while decompressing.
 
-## Unzip to disk
+### Unzip to disk
 
 1. Edit the `src/main.py` file and uncomment `load_file_into_disk()` at the bottom
 1. Inside the running container `cd ../mount`
@@ -76,7 +76,7 @@ Example run:
 
 The process was killed due to exhausting disk space while decompressing.
 
-## Unzip to S3 via stream
+### Unzip to S3 via stream
 
 1. Edit the `src/main.py` file and uncomment `stream_unzip_to_s3()` at the bottom
 1. Inside the running container `cd ../mount`
@@ -99,7 +99,7 @@ It worked! The file was downloaded and successfully uploaded back to S3 while de
 
 We successfully decompressed a file that was larger than both the memory and disk space available in our runtime environment. 
 
-### Notes
+#### Notes
 
 To view the free memory inside the running container, use
 `cat /proc/meminfo` and you'll see values for MemTotal, MemFree, and MemAvailable. 
